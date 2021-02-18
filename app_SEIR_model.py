@@ -9,7 +9,7 @@ Created on Thu Feb 18 14:37:32 2021
 import streamlit as st
 from numpy import array as vector
 import matplotlib.pyplot as plot
-from annotated_text import annotated_text
+#from annotated_text import annotated_text
 
 
 st.title("SEIR Modell")
@@ -73,9 +73,15 @@ def simulation1():
     return SEIR_simulation(beta, gamma, a, E0, I0, days)
 
 diagram(simulation1)
-annotated_text(
-    ("S", "", "#0000cc"),"S= Anteil der Anfälligen, engl. susceptible. Noch nicht infiziert", 
-    ("E", "", "#ffb000"),"E=Anteil der Exponierten, engl. exposed. Infiziert, aber noch nicht infektiös.", 
-    ("I", "", "#a00060"),"I=Anteil der Infektiösen, engl. infectious.", 
-    ("R", "", "#008000"),"R=Anteil der Erholten, engl. recovered oder resistant. Bzw. verstorben oder nach Symptomen in Quarantäne. ",
-)
+"""
+(Blau) S=Anteil der Anfälligen, engl. susceptible. Noch nicht infiziert
+(Gelb) E=Anteil der Exponierten, engl. exposed. Infiziert, aber noch nicht infektiös.
+(Magenta) I=Anteil der Infektiösen, engl. infectious.
+(Rot) R=Anteil der Erholten, engl. recovered oder resistant. Bzw. verstorben oder nach Symptomen in Quarantäne.
+"""
+# annotated_text(    
+#     ("S", "", "#0000cc"),"S= Anteil der Anfälligen, engl. susceptible. Noch nicht infiziert", 
+#     ("E", "", "#ffb000"),"E=Anteil der Exponierten, engl. exposed. Infiziert, aber noch nicht infektiös.", 
+#     ("I", "", "#a00060"),"I=Anteil der Infektiösen, engl. infectious.", 
+#     ("R", "", "#008000"),"R=Anteil der Erholten, engl. recovered oder resistant. Bzw. verstorben oder nach Symptomen in Quarantäne. ",
+# )
